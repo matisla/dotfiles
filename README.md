@@ -11,7 +11,7 @@ this file is placed in the `$HOME/.vim/ directory`.
 
 ## ZSH with Oh-my-zsh
 
-matisla.zsh-theme 
+[matisla.zsh-theme](https://github.com/matisla/dotfiles/blob/master/zsh/matisla.zsh-theme)
 
 ## tmux
 
