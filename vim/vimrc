@@ -33,10 +33,11 @@ set encoding=utf-8						" spécification de l'encodage
 set nu 									" active les numéros de ligne
 syntax on								" active la coloration de syntaxe
 
+source ~/.vim/mappings.vim
+
 " Folding
 set foldmethod=indent					" folding by indentation
 set foldlevel=1							" folding level when open
-nnoremap <Space> za						" space = Toggle folding open/close
 
 " Python highlight
 let python_highlight_all=1
