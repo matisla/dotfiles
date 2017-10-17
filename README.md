@@ -1,4 +1,12 @@
-# dot files
+# Dotfiles
+
+## TODO
+
+[ ] Add arrow for git Push/Pull needs on the prompt
+[ ] Create an install script
+[ ] Create the tmux configuration
+[ ] Setup the tmux python-ide configuration
+[ ] Complete this Readme
 
 ## VIM configuration
 
