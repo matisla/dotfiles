@@ -26,13 +26,13 @@ git_arrows() {
     echo $arrows
 }
 
-
-# git prompt
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[ff0]%} \uE0A0 (%B"
+# git prompt 
+# E0A0 vertical or 2387 horizontal
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[ff0]%} \u2387  %B"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%b"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%}?%{$reset_color%})"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✓%{$reset_color%})"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}✗%{$reset_color%})"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%}?%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✓%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}✗%{$reset_color%}"
 
 DIR_PROMPT="[%{$FG[105]%}%~%{$reset_color%}]"
 USER_PROMPT="%{$FG[154]%}%n@%m%{$reset_color%}"
@@ -43,4 +43,4 @@ CLOCK_PROMPT='⌚ %*'
 
 
 PROMPT="$DIR_PROMPT $(prompt_char) "
-RPROMPT='$(git_prompt_info)$(git_arrows) $USER_PROMPT'
+RPROMPT='$(git_prompt_info)$(git_arrows)'
