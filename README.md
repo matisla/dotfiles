@@ -8,6 +8,16 @@
 - [ ] Setup the tmux python-ide configuration
 - [ ] Complete this Readme
 
+## Install 
+
+To install the configuration:
+
+```
+&rightarrow git clone https://github.com/matisla/dotfiles.git ~/.dotfiles
+&rightarrow cd ~/.dotfiles
+&rightarrow make install
+```
+
 ## VIM configuration
 
 $HOME/.vimrc

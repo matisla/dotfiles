@@ -5,11 +5,11 @@
 #			IDE - Python
 #######################################
 
-if [ $# -eq 0 ] 
+if [ -z "$(tmux ls | cut -d ':' -f1 | grep 'py-ide')" ] 
 	then
-		set path='.'
+		;
 	else 
-		set path=$1
+		tmux kill-session -t 'py-ide'
 fi
 
 tmux new-session -s 'py-ide' -n 'editor' -d
