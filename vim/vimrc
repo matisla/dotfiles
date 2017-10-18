@@ -21,7 +21,7 @@ Plugin 'valloric/youcompleteme'			" autocompletion
 Plugin 'nvie/vim-flake8'				"PEP8
 
 " Plugin Docker
-Plugin 'ekalinin/dockerfile.vim'
+Plugin 'docker/docker'
 
 " Themes
 Plugin 'flazz/vim-colorschemes'			" gestionnaire de Theme
