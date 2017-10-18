@@ -29,7 +29,7 @@ git_arrows() {
 
 # git prompt
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[ff0]%} \uE0A0 (%B"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%b "
+ZSH_THEME_GIT_PROMPT_SUFFIX="%b"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[grey]%}?%{$reset_color%})"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✓%{$reset_color%})"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}✗%{$reset_color%})"
