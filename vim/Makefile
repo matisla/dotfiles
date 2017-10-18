@@ -10,6 +10,9 @@ clean:
 install: # vimrc mappings
 	vim +PluginInstall +qall
 
+update:
+	vim +PluginUpdate +qall
+
 vimrc:
 	@if [ -f $HOME/.vimrc ] then
 		mv $HOME/.vimrc $HOME/.vimrc.old
