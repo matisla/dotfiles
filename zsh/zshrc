@@ -89,12 +89,6 @@ export LC_ALL=
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# Alias definitions
+source $ZSH/custom/aliases.zsh
 
-# Public aliases
-alias docker='sudo docker'
-alias dnfi='sudo dnf install -y'
-
-# Private aliases
-[ -f $ZSH/custom/aliases.zsh ] && source $ZSH/custom/aliases.zsh
-
-alias sshRPI='ssh pi@192.168.0.45 -p 22'
