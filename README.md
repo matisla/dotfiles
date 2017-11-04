@@ -8,14 +8,19 @@
 - [ ] Setup the tmux python-ide configuration
 - [ ] Complete this Readme
 
-## Install 
+## Install
+
+### Ubuntu
+```
+sudo apt-get install git vim tmux
+```
 
 To install the configuration:
 
 ```
-&rightarrow git clone https://github.com/matisla/dotfiles.git ~/.dotfiles
-&rightarrow cd ~/.dotfiles
-&rightarrow make install
+git clone https://github.com/matisla/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+make install
 ```
 
 ## VIM configuration
