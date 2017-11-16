@@ -10,6 +10,12 @@
 
 ## Install
 
+### package needed
+
+- zsh
+- vim
+- tmux
+
 ### Ubuntu
 ```
 sudo apt-get install git vim tmux
