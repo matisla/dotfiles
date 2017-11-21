@@ -2,23 +2,20 @@ all:
 	$(MAKE) install
 
 clean:
-	rm $HOME.vimrc \
-		&& [ -f $HOME/.vimrc.old ] \
-		&& mv $HOME/.vimrc.old $HOME/.vimrc
-	rm $HOME/.vim/mappings.vim
+	rm $(HOME).vimrc \
+		&& [ -f $(HOME)/.vimrc.old ] \
+		&& mv $(HOME)/.vimrc.old $(HOME)/.vimrc
+	rm $(HOME)/.vim/mappings.vim
 
-install: # vimrc mappings
+install: vimrc mappings
 	vim +PluginInstall +qall
 
 update:
 	vim +PluginUpdate +qall
 
 vimrc:
-	@if [ -f $HOME/.vimrc ] then
-		mv $HOME/.vimrc $HOME/.vimrc.old
-		@echo "backup file created: $HOME/.vimrc.old"
-	fi
-	ln vimrc $HOME/.vimrc
+	ln -f vimrc $(HOME)/.vimrc
 
 mappings:
-	ln -f mappings.vim $HOME/.vim/mappings.vim
+	mkdir -p $(HOME)/.vim
+	ln -f mappings.vim $(HOME)/.vim/mappings.vim
