@@ -15,6 +15,8 @@
 - zsh
 - vim
 - tmux
+- conky : Info bar
+- compton : Windows Transition & Transparency
 
 ### Ubuntu
 ```
