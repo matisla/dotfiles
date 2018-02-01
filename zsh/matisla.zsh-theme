@@ -10,7 +10,7 @@ function git_info {
 		
 	if [ -z "$(git rev-parse --git-dir 2> /dev/null)" ]; then return; fi
 
-	local SYMBOL_CLEAN="%F{010}\u2713%f" # V 
+	local SYMBOL_CLEAN="%F{010}\u2714%f" # V 
 	local SYMBOL_DIRTY="%F{011}\u2718%f" # X
 	local PREFIX="%{$FG[ff0]%}\ue0a0%B"  # E0A0 vertical or 2387 horizontal
 	local SUFFIX="%b"
