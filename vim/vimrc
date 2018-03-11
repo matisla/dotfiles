@@ -36,7 +36,8 @@ filetype plugin indent on
 
 set tabstop=4							" 4 spaces for tabulation
 set encoding=utf-8
-set nu 									" activate ligne numbers
+set number 								" activate ligne numbers
+set relativenumber
 syntax on
 
 source ~/.vim/mappings.vim
