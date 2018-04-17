@@ -2,7 +2,7 @@ if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="white"; fi
 
 # prompt first char
 function prompt_char {
-	if [ $UID -eq 0 ]; then echo "#"; else echo '> '; fi
+	if [ $UID -eq 0 ]; then echo "# "; else echo "\u27a4 "; fi
 }
 
 # prompt git
@@ -21,16 +21,12 @@ function git_info {
 	local push="%F{011}$([ $git_count[1] -ne 0 ] && echo "|")%f" # 2191
 	local pull="%F{012}$([ $git_count[2] -ne 0 ] && echo "|")%f" # 2193
 	local stat="$([ -z "$(git diff --shortstat 2> /dev/null | tail -n1)" ] && echo "$SYMBOL_CLEAN" || echo "$SYMBOL_DIRTY")"
-	echo "$PREFIX($b)$SUFFIX$push$pull$stat"
+	
+	echo "$stat $PREFIX($b)$SUFFIX$push$pull"
 }
 
 DIR_PROMPT="[%{$FG[105]%}%~%{$reset_color%}]"
 USER_PROMPT="%{$FG[154]%}%n@%m%{$reset_color%}"
-
-# Not used
-CLOCK_PROMPT='⌚ %*'
-# REPO_NAME="$(basename $(git rev-parse --show-toplevel))"
-
 
 PROMPT="$DIR_PROMPT$(prompt_char)"
 RPROMPT='$(git_info)'

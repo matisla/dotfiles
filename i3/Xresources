@@ -3,15 +3,34 @@
 !--------------------------------------
 !xterm*faceName: xft:Inconsolata-g\ for\ Powerline:pixelsize=12:antialias=true
 
+
+! Xft
+!--------------------------------------
+Xft.dpi:		96
+Xft.antialias:	1
+Xft.autohint:	1
+Xft.hinting:	1
+Xft.hintstyle:	hintslight
+Xft.lcdfilter:	lcdlight
+Xft.rgba:		rgb
+
+
+
 ! URxvt
 !--------------------------------------
 
-!URxvt*font:      xft:Inconsolata-g\ for\ Powerline:pixelsize=12
-URxvt*font:		 xft:DejaVu\ Sans\ Mono\ for\ Powerline:pixelsize=12
-URxvt*scrollBar: false
+URxvt*termName:			rxvt-256-color
+URxvt*font:		 		xft:DejaVu\ Sans\ Mono\ for\ Powerline:pixelsize=12
+URxvt*scrollBar: 		false
+ URxvt*loginShell: 		true
+URxvt.internalBorder:	10
 
-URxvt*foreground: #F2F2F2
-URxvt*background: #101010
+! URxvt.matcher.button:	1
+
+URxvt*foreground: 		#F2F2F2
+URxvt*background: 		[95]#101010
+
+URxvt.depth:	32
 
 !------------------
 ! Standard colors
@@ -31,7 +50,7 @@ URxvt*color2:    #B6E77D
 URxvt*color3:    #ECEBBE
 URxvt*color4:    #A9CDEB
 URxvt*color5:    #EA96EB
-URxvt*color6:    #C9CAEC
+URxvt*color6:    #00FFFF
 URxvt*color7:    #F2F2F2
 
 !------------------
