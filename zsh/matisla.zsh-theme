@@ -18,8 +18,8 @@ function git_info {
 	local b=$(git branch | grep -E "^\*" | cut -d ' ' -f2)
     
 	git_count="$(command git rev-list --left-right --count HEAD...@'{u}' 2>/dev/null)"
-	local push="%F{011}$([ $git_count[1] -ne 0 ] && echo "|")%f" # 2191
-	local pull="%F{012}$([ $git_count[2] -ne 0 ] && echo "|")%f" # 2193
+	local push="%F{011}$( [ $git_count[1] -ne 0 ] && echo "|")%f" # 2191
+	local pull="%F{012}$( [ $git_count[2] -ne 0 ] && echo "|")%f" # 2193
 	local stat="$([ -z "$(git diff --shortstat 2> /dev/null | tail -n1)" ] && echo "$SYMBOL_CLEAN" || echo "$SYMBOL_DIRTY")"
 	
 	echo "$stat $PREFIX($b)$SUFFIX$push$pull"

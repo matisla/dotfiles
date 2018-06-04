@@ -9,5 +9,8 @@ alias ta='tmux attach -t '
 alias tls='tmux ls'
 alias tks='tmux kill-session -t '
 
+# Vim
+alias vim='nvim'
+
 # SERVER
 [ -f $ZSH/custom/server-alias.zsh ] && source server-alias.zsh
