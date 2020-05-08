@@ -1,0 +1,30 @@
+snippet extends
+{% extends '${1:core/base.html}' %}
+endsnippet
+
+snippet block
+{% block ${1:content} %}
+	${2}
+{% endblock %}
+endsnippet
+
+snippet for
+{% for ${1:element} in ${2:elements} %}
+	${3}
+{% endfor %}
+endsnippet
+
+snippet token
+{% csrf_token %}
+endsnippet
+
+snippet form
+<form method='POST'>
+	{% csrf_token %}
+	${1}
+</form>
+endsnippet
+
+snippet var
+{{ ${1} }}
+endsnippet

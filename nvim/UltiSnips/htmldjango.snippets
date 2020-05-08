@@ -1,0 +1,22 @@
+snippet form_field
+<div class="form-group">
+	<label for="id_{{ form.${1:field}.id_for_label }}">${2:Field}</label>
+	<input type="text" id="id_$1" name="$1" class="form-control" placeholder="$2">
+	{{ form.$1.errors }}
+</div>
+endsnippet
+
+snippet form
+<form method="POST">
+	{% csrf_token %}
+	{{ form.non_field_errors }}
+</form>
+endsnippet
+
+snippet url
+<a href="{% url '${1:url}' %}">${2}</a>
+endsnippet
+
+snippet var
+{{ ${1:variable} }}${2}
+endsnippet
