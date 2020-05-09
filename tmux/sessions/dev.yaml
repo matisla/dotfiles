@@ -1,0 +1,19 @@
+session_name: dev
+windows:
+  - window_name: editor
+    focus: 'true'
+    layout: main-horizontal
+    options:
+      automatic-rename: 'off'
+      main-pane-height: 60
+    panes:
+    - focus: 'true'
+      shell_command:
+      - $EDITOR
+    - shell_command:
+      - null
+  - window_name: conole
+    layout: main-vertical
+    panes:
+    - focus: 'true'
+      shell_command: null
