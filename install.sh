@@ -9,14 +9,16 @@ Help()
 
 install_tmux()
 {
-	tmux -V
+	tmux -V && tmuxp --version
 	if [ $? -ne 0 ]; then
-		echo 'Please install tmux'
+		echo 'Please install tmux and tmuxp'
 	fi
 	echo
 	echo '---------- CONFIG TMUX -----------'
 	echo
+	mkdir -pv $HOME/.config/tmux
 	cp -l --backup --verbose tmux/tmux.conf $HOME/.tmux.conf
+	cp -l --backup --verbose tmux/sessions/* $HOME/.config/tmux/
 	echo
 	echo '---------- TMUX DONE -------------'
 }
@@ -30,7 +32,7 @@ install_nvim()
 	echo
 	echo '---------- CONFIG NEOVIM ---------'
 	echo
-	cp -rl --verbose nvim/* $HOME/.config/nvim/
+	cp -lr --verbose nvim/* $HOME/.config/nvim/
 	echo
 	echo '---------- NEOVIM DONE -----------'
 }
