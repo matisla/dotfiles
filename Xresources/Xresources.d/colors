@@ -1,0 +1,41 @@
+! === Colours ===
+
+! main
+
+*background: black
+*foreground: white
+
+*.cursorColor:  white
+
+! color:
+! - 1: black
+! - 2: red
+! - 3: green
+! - 4: yellow
+! - 5: blue
+! - 6: magenta
+! - 7: cyan
+! - 8: grey
+
+! Dark
+
+*color0:  #040404
+*color1:  #fc5f5a
+*color2:  #6ab017
+*color3:  #f2d42c
+*color4:  #709aed
+*color5:  #d961dc
+*color6:  #23d7d7
+*color7:  #e1e1e1
+
+! Light
+
+*color8:  #575656
+*color9:  #fe4450
+*color10: #31d07b
+*color11: #e1e387
+*color12: #315eee
+*color13: #ff7edb
+*color14: #03edf9
+*color15: #ffffff
+

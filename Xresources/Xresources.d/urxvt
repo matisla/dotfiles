@@ -1,0 +1,27 @@
+! === rxvt-unicode ===
+
+URxvt.perl-ext-common: matcher,clipboard
+
+URxvt*font: xft:DejaVu Sans Mono:size=12
+URxvt*boldFont: xft:DejaVu Sans Mono Bold:size=12
+URxvt*scrollBar: false
+
+URxvt.depth: 32
+URxvt.inheritPixmap: true
+URxvt.transparent: true
+
+URxvt.shading: 50
+! URxvt.blurRadius: 40
+URxvt.internalBorder: 5
+
+URxvt.borderLess: false
+URxvt.background.border: false
+
+! URL
+URxvt.url.select.underline: true
+URxvt.url.launcher: /usr/bin/firefox
+
+! Key mapping
+URxvt.clipboard.autocopy: true
+URxvt.keysym.M-c perl:clipboard:copy
+URxvt.keysym.M-v perl:clipboard:paste
