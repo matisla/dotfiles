@@ -1,56 +1,61 @@
 #!/bin/sh
 
 INSTALL='sudo pacman -S --noconfirm'
+PART=$1
 
 Help()
 {
-	echo 'Usage: install [tmux|nvim]'	
-}
-
-install_tmux()
-{
-	tmux -V && tmuxp --version
-	if [ $? -ne 0 ]; then
-		echo 'Please install tmux and tmuxp'
-	fi
-	echo
-	echo '---------- CONFIG TMUX -----------'
-	echo
-	mkdir -pv $HOME/.config/tmux
-	cp -l --backup --verbose tmux/tmux.conf $HOME/.tmux.conf
-	cp -l --backup --verbose tmux/sessions/* $HOME/.config/tmux/
-	echo
-	echo '---------- TMUX DONE -------------'
-}
-
-install_nvim()
-{
-	nvim --version
-	if [ $? -ne 0 ]; then
-		echo 'Please install nvim'
-	fi
-	echo
-	echo '---------- CONFIG NEOVIM ---------'
-	echo
-	cp -lr --verbose nvim/* $HOME/.config/nvim/
-	echo
-	echo '---------- NEOVIM DONE -----------'
+	echo 'Usage: install [tmux|nvim|banner]'	
 }
 
 if [ $# -ne 1 ]; then
 	echo 'number of argument invalid'
+	echo
+	Help
 	exit 1
 fi
 
-echo '---------- START INSTALLATION ----'
 
-if [ 'tmux' == $1 ]; then
-	install_tmux
-elif [ 'nvim' == $1 ]; then
-	install_nvim
-else
-	Help	
-fi
+echo '---------- START INSTALLATION ----'
+echo 
+
+case $PART in
+
+	banner)
+		echo
+		echo '---------- CONFIG BANNER ---------'
+		echo
+		cp -v --backup etc/issue{,.net} /etc/issue{,.net}
+		echo
+		echo '---------- BANNER DONE -----------'
+	;;
+
+	tmux)
+		cd tmux
+		sh install.sh
+		cd ..
+	;;
+
+	nvim)
+		nvim --version
+
+		if [ $? -ne 0 ]; then
+			echo 'Please install nvim'
+		fi
+
+		echo
+		echo '---------- CONFIG NEOVIM ---------'
+		echo
+		cp -lr --verbose nvim/* $HOME/.config/nvim/
+		echo
+		echo '---------- NEOVIM DONE -----------'
+	;;
+
+	--help)
+	*)
+	exit 1
+
+esac
 
 echo
 echo '---------- END -------------------'
