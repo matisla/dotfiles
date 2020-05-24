@@ -1,6 +1,5 @@
 #/bin/sh
 
-echo
 echo '---------- CONFIG TMUX -----------'
 echo
 

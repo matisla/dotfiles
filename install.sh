@@ -21,6 +21,12 @@ echo
 
 case $PART in
 
+	i3)
+		cd i3
+		sh install.sh
+		cd ..
+	;;
+
 	banner)
 		echo
 		echo '---------- CONFIG BANNER ---------'
