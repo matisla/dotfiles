@@ -58,6 +58,7 @@ case $PART in
 		echo
 		echo '---------- CONFIG NEOVIM ---------'
 		echo
+		mkdir -pv $HOME/.config/nvim
 		cp -lr --verbose nvim/* $HOME/.config/nvim/
 		echo
 		echo '---------- NEOVIM DONE -----------'
