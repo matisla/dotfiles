@@ -41,6 +41,12 @@ case $PART in
 		sh install.sh
 		cd ..
 	;;
+	
+	zsh)
+		cd zsh
+		sh install.sh
+		cd ..
+	;;
 
 	nvim)
 		nvim --version
@@ -58,8 +64,12 @@ case $PART in
 	;;
 
 	--help)
+		Help
+	;;
+
 	*)
-	exit 1
+		echo "wrong parameter, try with --help"
+	    exit 1
 
 esac
 
