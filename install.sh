@@ -60,6 +60,7 @@ case $PART in
 		echo
 		mkdir -pv $HOME/.config/nvim
 		cp -lr --verbose nvim/* $HOME/.config/nvim/
+		nvim +PlugInstall +qa
 		echo
 		echo '---------- NEOVIM DONE -----------'
 	;;
