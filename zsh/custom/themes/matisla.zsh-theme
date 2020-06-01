@@ -2,7 +2,7 @@ if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="white"; fi
 
 # prompt first char
 function prompt_char {
-	if [ $UID -eq 0 ]; then echo "# "; else echo "$ "; fi
+	if [ $UID -eq 0 ]; then echo "#"; else echo "$"; fi
 }
 
 DIR_PROMPT="%{$fg[blue]%}%~%{$reset_color%}"
