@@ -24,6 +24,7 @@ plugins=(
 	z
 	docker
 	tmux
+	git-prompt
 )
 
 source $ZSH/oh-my-zsh.sh
